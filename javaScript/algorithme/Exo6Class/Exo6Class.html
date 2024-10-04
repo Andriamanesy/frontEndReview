@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class en js</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Calculator() {
+            this.add = function (a, b) {
+                return a + b;
+            }
+            this.sous = function (a, b) {
+                return a - b;
+            }
+            this.div = function (a, b) {
+                return a / b;
+            }
+            this.multiply = function (a, b) {
+                return a * b;
+            }
+            this.mod = function (a, b) {
+                return a % b;
+            }
+        }
+        var cal = new Calculator();
+        var result = cal.add(5, 6);
+        document.write(result + "<br>") //addition
+        var result = cal.sous(5, 6);
+        document.write(result + "<br>") //soustraction
+        var result = cal.div(6, 5);
+        document.write(result + "<br>") //division
+        var result = cal.multiply(5, 6);
+        document.write(result + "<br>") //multiplication
+        var result = cal.mod(5, 4);
+        document.write(result + "<br>") //modulo
+    </script>
+</body>
+
+</html>
