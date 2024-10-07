@@ -2,11 +2,30 @@ body {
     margin: 0;
 }
 
-
-
 .logo {
-    margin-top: 0%;
-    margin-left: 25px;
+    float: left;
+    margin: 0;
+    color: #ffff;
+    text-transform: capitalize;
+    font-style: italic;
+    width: 70%;
+
+}
+
+.headerNav {
+    float: right;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header {
+    overflow: hidden;
+    background-color: gray;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .img_header {
@@ -14,28 +33,58 @@ body {
     height: auto;
 }
 
-header {
-    background-color: gray;
-    padding-top: 20px;
-    height: auto;
-}
-
-header nav {
-    margin-left: 25px;
-    margin-bottom: 10px;
-}
-
 header nav a {
     padding-right: 15px;
+    color: #ffff;
+    text-decoration-line: none;
 }
 
-#aPropos,
-#contact {
+header nav a:hover {
+    padding-right: 15px;
+    color: #0026fa;
+    text-decoration-line: underline;
+}
+
+.main {
+    /*top: 30px;*/
+    position: relative;
+    z-index: 1;
     padding: 20px;
     background-color: lightgray;
+
 }
 
+.alignLeft {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.alignRight {
+    margin-left: 15px;
+    float: right;
+    margin-bottom: 15px;
+}
+
+#principale p {
+    text-align: justify;
+}
+
+p,
+hr {
+    clear: both;
+}
+
+
 footer {
-    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: gray;
+    z-index: 3;
+}
+
+.text-foot {
+    text-align: center;
 }
