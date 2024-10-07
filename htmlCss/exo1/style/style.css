@@ -3,29 +3,46 @@ body {
 }
 
 .logo {
-    float: left;
     margin: 0;
     color: #ffff;
+    text-align: center;
     text-transform: capitalize;
     font-style: italic;
-    width: 70%;
-
+    z-index: 4;
 }
 
 .headerNav {
-    float: right;
+    overflow: hidden;
     text-align: center;
     margin-top: 10px;
+    z-index: 3;
+}
+
+.headerNav a {
+    float: left;
+    width: 25%;
+    color: #ffff;
+    text-decoration-line: none;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 header {
-    overflow: hidden;
-    background-color: gray;
+    background-image: linear-gradient(rgba(254, 254, 254, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/img_header.jpg");
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
     padding: 20px;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 2;
+    height: 75px;
+}
+
+header nav a:hover {
+    color: #0026fa;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration-line: underline;
 }
 
 .img_header {
@@ -33,23 +50,18 @@ header {
     height: auto;
 }
 
-header nav a {
-    padding-right: 15px;
-    color: #ffff;
-    text-decoration-line: none;
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
-header nav a:hover {
-    padding-right: 15px;
-    color: #0026fa;
-    text-decoration-line: underline;
-}
 
 .main {
-    /*top: 30px;*/
-    position: relative;
     z-index: 1;
     padding: 20px;
+    padding-top: 105px;
     background-color: lightgray;
 
 }
@@ -75,6 +87,34 @@ hr {
     clear: both;
 }
 
+.contact {
+    position: relative;
+    background-color: lightgray;
+    padding-bottom: 80px;
+}
+
+.contact form {
+    border: solid;
+    border-radius: 15px;
+    width: 650px;
+    height: 450px;
+}
+
+.contact form div {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.contact form div label {
+    margin-right: 20px;
+}
+
+.address {
+    position: absolute;
+    top: 45px;
+    left: 55%;
+    right: 55px;
+}
 
 footer {
     position: fixed;
