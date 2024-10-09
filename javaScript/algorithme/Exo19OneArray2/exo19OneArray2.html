@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneArray</title>
+</head>
+
+<body>
+    <span id="msg"></span>
+    <script type="text/javascript">
+        var msgObj = document.getElementById("msg");
+        msgObj.innerHTML = "";
+        var tab = new Array(); // Définir dynamiquement un tableau unidimensionnel
+        tab[0] = 5;
+        tab[1] = 15;
+        tab[2] = 8;
+        tab[3] = 9;
+        tab[4] = 70;
+
+        for (let i = 0; i < tab.length; i++) {
+            msgObj.innerHTML += i + ", ";
+        }
+    </script>
+</body>
+
+</html>

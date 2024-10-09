@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web calculator</title>
+</head>
+
+<body>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <span> = </span>
+    <span id="result"></span>
+    <input type="button" value="Addition" onclick="doAdd()">
+    <input type="button" value="Soustraction" onclick="doSous()">
+    <input type="button" value="Multiplication" onclick="doMulti()">
+    <input type="button" value="Division" onclick="doDiv()">
+    <input type="button" value="Modulo" onclick="doModu()">
+    <script type="text/javascript">
+        var aObj = document.getElementById("a");
+        var bObj = document.getElementById("b");
+        var resultObj = document.getElementById("result");
+
+        function doAdd() {
+            var a = parseInt(aObj.value);
+            var b = parseInt(bObj.value);
+            resultObj.innerHTML = a + b;
+        }
+        function doSous() {
+            var a = parseInt(aObj.value);
+            var b = parseInt(bObj.value);
+            resultObj.innerHTML = a - b;
+        }
+        function doMulti() {
+            var a = parseInt(aObj.value);
+            var b = parseInt(bObj.value);
+            resultObj.innerHTML = a * b;
+        }
+        function doDiv() {
+            var a = parseInt(aObj.value);
+            var b = parseInt(bObj.value);
+            if (a < b) {
+                resultObj.innerHTML = "Dividende doit être superieur au diviseur";
+            } else {
+                resultObj.innerHTML = a / b;
+            }
+        }
+        function doModu() {
+            var a = parseInt(aObj.value);
+            var b = parseInt(bObj.value);
+            resultObj.innerHTML = a % b;
+        }
+    </script>
+</body>
+
+</html>

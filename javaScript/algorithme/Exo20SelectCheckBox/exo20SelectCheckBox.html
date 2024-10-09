@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelectCheckBox</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><input type="checkbox" onclick="doCheckAll(this)">Select Tout</td>
+            <td><strong>Nom du livre</strong></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="book"></td>
+            <td>Père riche et père pauvre</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="book"></td>
+            <td>Tantara</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="book"></td>
+            <td>Geographie</td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function doCheckAll(obj) {
+            var listCheck = document.getElementsByName("book");
+            for (let i = 0; i < listCheck.length; i++) {
+                listCheck[i].checked = obj.checked;
+            }
+        }
+        /*Explication détaillée :
+
+document.getElementsByName("book") : Cette fonction retourne une collection (un tableau) 
+de toutes les cases à cocher dont l'attribut name est "book". Dans ce cas, ce sont les cases à cocher associées aux livres.
+
+obj.checked : obj fait référence à la case à cocher "Select Tout" qui a déclenché l'événement. 
+obj.checked est un booléen qui est true si la case est cochée, et false si elle est décochée.
+
+Boucle for : La boucle parcourt toutes les cases à cocher récupérées par getElementsByName("book") 
+et assigne à chaque case la valeur true ou false en fonction de l'état de "Select Tout".
+Si la case "Select Tout" est cochée, toutes les cases seront cochées. Si elle est décochée, toutes les cases seront décochées.*/
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwoArray</title>
+    <style>
+        input {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="result"></span>
+    <script type="text/javascript">
+        var tab = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+        var btn = "";
+        for (let i = 0; i < tab.length; i++) {
+            for (let j = 0; j < tab[i].length; j++) {
+                tab[i][j] = Math.floor(Math.random() * 2) + 1;
+            }
+
+        }
+        for (let i = 0; i < tab.length; i++) {
+            for (let j = 0; j < tab[i].length; j++) {
+                btn += "<input type='button' value=' ' onClick = 'doClick(this," + tab[i][j] + ")' />"
+            }
+            btn += "<br>";
+        }
+        document.getElementById("result").innerHTML = btn;
+
+        function doClick(obj, value) {
+            if (value == 1) {
+                obj.value = "*";
+            } else if (value == 2) {
+                obj.value = "Dog";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-down</title>
+</head>
+
+<body>
+    <select name="" id="country">
+        <option value="">--Please Select Country--</option>
+    </select>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var objselect = document.getElementById("country");
+
+            var option = document.createElement("option");
+            option.text = "Madagascar";
+            option.value = "Madagascar";
+            objselect.options[objselect.options.length] = option;
+        }
+    </script>
+
+</body>
+
+</html>

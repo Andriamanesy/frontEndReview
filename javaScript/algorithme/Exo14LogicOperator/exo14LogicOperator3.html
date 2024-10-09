@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input_tax">
+    <input type="button" id="input_btn" value="Calculer" onclick="tax()">
+    <span id="message"></span>
+    <script type="text/javascript">
+        /*Tax = salary * tax rate level:
+            500 -- 2000 $ : tax rate 10%
+            2000--5000 $ : tax rate 15%
+            5000-- 20000 $ : tax rate 20%
+            More than 20000$ : tax rate 30% 
+        */
+        function tax() {
+            var salary = document.getElementById("input_tax");
+            var salary_pars = parseInt(salary.value);
+            var msg = document.getElementById("message");
+            var tax = 0;
+            if (salary_pars < 500) {
+                msg.innerHTML = "Votre taxe est égale 0";
+            } else if (salary_pars >= 500 && salary_pars <= 2000) {
+                tax = salary_pars * 0.1;
+                msg.innerHTML = "Votre taxe est égale " + tax;
+            } else if (salary_pars > 2000 && salary_pars <= 5000) {
+                tax = salary_pars * 0.15;
+                msg.innerHTML = "Votre taxe est égale " + tax;
+            } else if (salary_pars > 5000 && salary_pars <= 20000) {
+                tax = salary_pars * 0.2;
+                msg.innerHTML = "Votre taxe est égale " + tax;
+            } else if (salary_pars > 20000) {
+                tax = salary_pars * 0.3;
+                msg.innerHTML = "Votre taxe est égale " + tax;
+            }
+        }
+    </script>
+</body>
+
+</html>

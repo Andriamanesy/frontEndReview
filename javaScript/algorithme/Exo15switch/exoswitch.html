@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+
+<body>
+    <input type="radio" name="card" value="1" id="visa" onclick="doPay(this)"> Visa
+    <input type="radio" name="card" value="2" id="master" onclick="doPay(this)"> Master
+    <input type="radio" name="card" value="3" id="paypal" onclick="doPay(this)"> paypal
+    <br>
+    <span id="message"></span>
+
+    <script type="text/javascript">
+        function doPay(obj) {
+            var val = parseInt(obj.value);
+            var result = document.getElementById("message");
+            switch (val) {
+                case 1:
+                    result.innerHTML = "Pay by Visa Card";
+                    break;
+                case 2:
+                    result.innerHTML = "Pay by Master Card";
+                    break;
+                case 3:
+                    result.innerHTML = "Pay by Paypal";
+                    break;
+                default:
+            }
+        }
+    </script>
+</body>
+
+</html>

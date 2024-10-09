@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-down</title>
+</head>
+
+<body>
+    <select name="" id="Country" onchange="doClick(this)">
+        <option value="">--Please Select Country--</option>
+    </select>
+    <select name="" id="ville">
+
+    </select>
+    <script type="text/javascript">
+        var pays = ["Madagascar", "France"];
+        var ville = new Array();
+        ville[0] = "";
+        ville[1] = ["Antananarivo", "Toamasina", "Antsiranana", "Fianarantsoa", "Mahajanga", "Toliara"];
+        ville[2] = ["Marseille", "Paris", "Nice", "Toulose"];
+
+        window.onload = function () {
+            var objselect = document.getElementById("Country")
+            for (let i = 0; i < pays.length; i++) {
+                var option = document.createElement("option");
+                option.text = pays[i];
+                option.value = pays[i];
+                objselect.options[objselect.options.length] = option;
+            }
+
+        }
+        function doClick(obj) {
+            var objVille = document.getElementById("ville");
+            objVille.options.length = 0;
+            var index = obj.selectedIndex;
+            for (let i = 0; i < ville[index].length; i++) {
+                var option = document.createElement("option");
+                option.text = ville[index][i];
+                option.value = ville[index][i];
+                objVille.options[objVille.options.length] = option;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

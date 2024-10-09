@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opérateur Relationnel</title>
+</head>
+
+<body>
+    <label for="score">Score</label>
+    <input type="text" id="score">
+    <input type="button" value="Ok" id="comparer" onclick="compare()">
+    <span id="commentaire"></span>
+
+    <script type="text/javascript">
+        var scoreObj = document.getElementById("score");
+        var comparerObj = document.getElementById("comparer");
+        var commentaireObj = document.getElementById("commentaire");
+
+        function compare() {
+            var scoreObjPars = parseInt(scoreObj.value);
+
+            if (scoreObjPars == 5) {
+                commentaireObj.innerHTML = "Excellent";
+            } else if (scoreObjPars == 4) {
+                commentaireObj.innerHTML = "Good"
+            } else {
+                commentaireObj.innerHTML = "Need to catch up"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

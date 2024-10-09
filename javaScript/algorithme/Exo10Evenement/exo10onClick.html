@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenement</title>
+</head>
+
+<body>
+    <input type="text" value="Brian" id="username" />
+    <input type="button" value="Click Me" onclick="doClick()" />
+
+    <script type="text/javascript">
+        function doClick() {
+            var a = document.getElementById("username");
+            var val = a.value;
+            alert(val);
+        }
+    </script>
+</body>
+
+</html>

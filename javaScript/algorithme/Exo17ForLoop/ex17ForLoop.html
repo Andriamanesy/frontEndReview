@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForLoop</title>
+</head>
+
+<body>
+    <input type="text" id="finDeCompte">
+    <input type="button" value="Compter" onclick="compteur()">
+    <br>
+    <span id="affiche"></span>
+    <script type="text/javascript">
+        function compteur() {
+            var obj = document.getElementById("finDeCompte");
+            var objPars = parseInt(obj.value);
+            var result = document.getElementById("affiche");
+            result.innerHTML = "";
+            for (let i = 0; i <= objPars; i++) {
+                if (objPars == i) {
+                    result.innerHTML += i + ".";
+                } else {
+                    result.innerHTML += i + ", ";
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

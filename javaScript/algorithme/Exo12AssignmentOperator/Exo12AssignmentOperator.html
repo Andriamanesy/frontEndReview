@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssignmentOperator</title>
+</head>
+
+<body>
+    <input type="text" id="nbr" value="0">
+    <input type="button" value="+" id="plus" onclick="increment()">
+    <input type="button" value="-" id="moins" onclick="decrement()">
+
+    <script type="text/javascript">
+        var nb = document.getElementById("nbr");
+        function increment() {
+            var a = parseInt(nb.value);
+            a++;
+            nb.value = a;
+        }
+        function decrement() {
+            var b = parseInt(nb.value);
+            b--;
+            nb.value = b;
+        }
+    </script>
+</body>
+
+</html>
