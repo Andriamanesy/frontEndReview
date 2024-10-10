@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo22Drop-down2Revision</title>
+</head>
+
+<body>
+    <select name="" id="pays" onchange="doClick(this)">
+        <option value="">Selectionner un pays</option>
+    </select>
+    <select name="" id="ville">
+
+    </select>
+    <script type="text/javascript">
+        var country = ["Madagascar", "France"];
+        window.onload = function () {
+            var objPays = document.getElementById("pays");
+            for (let i = 0; i < country.length; i++) {
+                var option = document.createElement("option");
+                option.value = country[i];
+                option.text = country[i];
+                objPays.options[objPays.options.length] = option;
+            }
+        }
+        function doClick(obj) {
+            var objVille = document.getElementById("ville");
+            objVille.options.length = 0;
+            var arr = new Array();
+            arr[0] = "";
+            arr[1] = ["Antananarivo", "Antsiranana", "Mahajanga", "Fianarantsoa", "Tulear", "Toamasina"];
+            arr[2] = ["Marseille", "Paris", "Toulouse", "Nice", "Montpellier"];
+            var index = obj.selectedIndex;
+            for (let i = 0; i < arr[index].length; i++) {
+                var option = document.createElement("option");
+                option.value = arr[index][i];
+                option.text = arr[index][i];
+                objVille.options[objVille.options.length] = option;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revion3</title>
+    <style>
+        input {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="affiche"></span>
+    <p id="score1"></p>
+    <p id="score2"></p>
+    <p id="score3"></p>
+    <script type="text/javascript">
+        var arr = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                var num = Math.floor(Math.random() * 3 + 1);
+                arr[i][j] = num;
+            }
+        }
+        var compteur1 = 0;
+        var compteur2 = 0;
+        var compteur3 = 0;
+        function jeux(obj, value, b) {
+            if (value == 1 && b == false) {
+                obj.value = "Trésor";
+                compteur1 += 1;
+                b = true;
+                var msg1 = "Le sore de trésor est " + compteur1;
+                document.getElementById("score1").innerHTML = msg1;
+            } else if (value == 2 && b == false) {
+                obj.value = "Brian";
+                compteur2 += 1
+                b = true;
+                var msg2 = "Le sore de Brian est " + compteur2;
+                document.getElementById("score2").innerHTML = msg2;
+            } else if (value == 3 && b == false) {
+                obj.value = "Jenny";
+                compteur3 += 1;
+                b = true;
+                var msg3 = "Le sore de Jenny est " + compteur3;
+                document.getElementById("score3").innerHTML = msg3;
+            }
+        }
+        var result = "";
+        var bol = false;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                result += "<input type='button' value='' onclick='jeux(this, " + arr[i][j] + ", " + bol + ")'>";
+            }
+            result += "<br>";
+        }
+        document.getElementById("affiche").innerHTML = result;
+
+    </script>
+
+</body>
+
+</html>

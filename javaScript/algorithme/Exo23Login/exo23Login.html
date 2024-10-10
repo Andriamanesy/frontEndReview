@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    USERNAME <input type="text" id="username">
+    <br>
+    MOT DE PASSE <input type="password" id="mdp">
+    <input type="button" value="Connecter" onclick="connect()">
+    <script type="text/javascript">
+        var objUsername = document.getElementById("username");
+        var objMdp = document.getElementById("mdp");
+
+        window.onkeypress = function (event) {
+            var key = event.keyCode || event.which;
+            if (key == 13) {
+                connect();
+            }
+        }
+
+        function connect() {
+            if (objUsername.value == "" || objUsername.value == " ") {
+                alert("Le champ Usename est vide");
+            } else if (objMdp.value == "" || objMdp.value == " ") {
+                alert("Le champ Mot de passe est vide");
+            } else {
+                alert("Bienvenue");
+            }
+        }
+    </script>
+</body>
+
+</html>

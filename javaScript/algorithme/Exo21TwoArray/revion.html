@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Touvez le chien</h3>
+    <span id="msg"></span>
+    <script type="text/javascript">
+        var cage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+        for (let i = 0; i < cage.length; i++) {
+            for (let j = 0; j < cage[i].length; j++) {
+                var num = Math.floor(Math.random() * 2 + 1);
+                cage[i][j] = num;
+            }
+        }
+        function doChange(obj, value) {
+            if (value == 1) {
+                obj.value = "*";
+            } else if (value == 2) {
+                obj.value = "Dog";
+            }
+        }
+        var result = "";
+        for (let i = 0; i < cage.length; i++) {
+            for (let j = 0; j < cage[i].length; j++) {
+                result += "<input type='button' value='' onclick='doChange(this, " + cage[i][j] + ")'>";
+            }
+            result += "<br>";
+        }
+        document.getElementById("msg").innerHTML = result;
+    </script>
+</body>
+
+</html>
